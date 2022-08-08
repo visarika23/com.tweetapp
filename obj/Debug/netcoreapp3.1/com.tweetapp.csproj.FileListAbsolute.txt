@@ -1,0 +1,351 @@
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\com.tweetapp.exe
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\com.tweetapp.deps.json
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\com.tweetapp.runtimeconfig.json
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\com.tweetapp.runtimeconfig.dev.json
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\com.tweetapp.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\com.tweetapp.pdb
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\DnsClient.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\dotnet-aspnet-codegenerator-design.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\MongoDB.Bson.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\MongoDB.Driver.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\MongoDB.Driver.Core.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\MongoDB.Libmongocrypt.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\SharpCompress.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\System.Composition.AttributedModel.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\System.Composition.Convention.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\System.Composition.Hosting.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\System.Composition.Runtime.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\System.Composition.TypedParts.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\Xamarin.Essentials.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\runtimes\linux\native\libsnappy64.so
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\runtimes\linux\native\libzstd.so
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\runtimes\osx\native\libsnappy64.dylib
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\runtimes\osx\native\libzstd.dylib
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\runtimes\win\native\libzstd.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\runtimes\win\native\snappy32.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\runtimes\win\native\snappy64.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\runtimes\linux\native\libmongocrypt.so
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\runtimes\osx\native\libmongocrypt.dylib
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\bin\Debug\netcoreapp3.1\runtimes\win\native\mongocrypt.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\obj\Debug\netcoreapp3.1\com.tweetapp.AssemblyInfoInputs.cache
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\obj\Debug\netcoreapp3.1\com.tweetapp.AssemblyInfo.cs
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\obj\Debug\netcoreapp3.1\com.tweetapp.csproj.CoreCompileInputs.cache
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\obj\Debug\netcoreapp3.1\com.tweetapp.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\obj\Debug\netcoreapp3.1\com.tweetapp.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\obj\Debug\netcoreapp3.1\staticwebassets\com.tweetapp.StaticWebAssets.Manifest.cache
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\obj\Debug\netcoreapp3.1\staticwebassets\com.tweetapp.StaticWebAssets.xml
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\obj\Debug\netcoreapp3.1\scopedcss\bundle\com.tweetapp.styles.css
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\obj\Debug\netcoreapp3.1\com.tweetapp.RazorTargetAssemblyInfo.cache
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\obj\Debug\netcoreapp3.1\com.tweetapp.csproj.CopyComplete
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\obj\Debug\netcoreapp3.1\com.tweetapp.dll
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\obj\Debug\netcoreapp3.1\com.tweetapp.pdb
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\obj\Debug\netcoreapp3.1\com.tweetapp.genruntimeconfig.cache
+C:\Users\Minu Choubey\Documents\tweet1\com.tweetapp\obj\Debug\netcoreapp3.1\com.tweetapp.csproj.AssemblyReference.cache
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\com.tweetapp.StaticWebAssets.xml
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\com.tweetapp.exe
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\com.tweetapp.deps.json
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\com.tweetapp.runtimeconfig.json
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\com.tweetapp.runtimeconfig.dev.json
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\com.tweetapp.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\com.tweetapp.pdb
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\DnsClient.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\dotnet-aspnet-codegenerator-design.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\MongoDB.Bson.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\MongoDB.Driver.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\MongoDB.Driver.Core.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\MongoDB.Libmongocrypt.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\SharpCompress.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\System.Composition.AttributedModel.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\System.Composition.Convention.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\System.Composition.Hosting.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\System.Composition.Runtime.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\System.Composition.TypedParts.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\Xamarin.Essentials.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\runtimes\linux\native\libsnappy64.so
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\runtimes\linux\native\libzstd.so
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\runtimes\osx\native\libsnappy64.dylib
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\runtimes\osx\native\libzstd.dylib
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\runtimes\win\native\libzstd.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\runtimes\win\native\snappy32.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\runtimes\win\native\snappy64.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\runtimes\linux\native\libmongocrypt.so
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\runtimes\osx\native\libmongocrypt.dylib
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\bin\Debug\netcoreapp3.1\runtimes\win\native\mongocrypt.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\obj\Debug\netcoreapp3.1\com.tweetapp.csproj.AssemblyReference.cache
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\obj\Debug\netcoreapp3.1\com.tweetapp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\obj\Debug\netcoreapp3.1\com.tweetapp.AssemblyInfoInputs.cache
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\obj\Debug\netcoreapp3.1\com.tweetapp.AssemblyInfo.cs
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\obj\Debug\netcoreapp3.1\com.tweetapp.csproj.CoreCompileInputs.cache
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\obj\Debug\netcoreapp3.1\com.tweetapp.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\obj\Debug\netcoreapp3.1\com.tweetapp.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\obj\Debug\netcoreapp3.1\staticwebassets\com.tweetapp.StaticWebAssets.Manifest.cache
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\obj\Debug\netcoreapp3.1\com.tweetapp.RazorTargetAssemblyInfo.cache
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\obj\Debug\netcoreapp3.1\com.tweetapp.csproj.CopyComplete
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\obj\Debug\netcoreapp3.1\com.tweetapp.dll
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\obj\Debug\netcoreapp3.1\com.tweetapp.pdb
+C:\Users\RU523LW\Downloads\com.tweetapp\com.tweetapp\obj\Debug\netcoreapp3.1\com.tweetapp.genruntimeconfig.cache
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\com.tweetapp.StaticWebAssets.xml
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\com.tweetapp.exe
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\com.tweetapp.deps.json
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\com.tweetapp.runtimeconfig.json
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\com.tweetapp.runtimeconfig.dev.json
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\com.tweetapp.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\com.tweetapp.pdb
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\DnsClient.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\dotnet-aspnet-codegenerator-design.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\MongoDB.Bson.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\MongoDB.Driver.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\MongoDB.Driver.Core.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\MongoDB.Libmongocrypt.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\SharpCompress.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\System.Composition.AttributedModel.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\System.Composition.Convention.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\System.Composition.Hosting.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\System.Composition.Runtime.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\System.Composition.TypedParts.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\Xamarin.Essentials.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\runtimes\linux\native\libsnappy64.so
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\runtimes\linux\native\libzstd.so
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\runtimes\osx\native\libsnappy64.dylib
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\runtimes\osx\native\libzstd.dylib
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\runtimes\win\native\libzstd.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\runtimes\win\native\snappy32.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\runtimes\win\native\snappy64.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\runtimes\linux\native\libmongocrypt.so
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\runtimes\osx\native\libmongocrypt.dylib
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\netcoreapp3.1\runtimes\win\native\mongocrypt.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\obj\Debug\netcoreapp3.1\com.tweetapp.csproj.AssemblyReference.cache
+C:\Users\RU523LW\source\repos\com.tweetapp\obj\Debug\netcoreapp3.1\com.tweetapp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\RU523LW\source\repos\com.tweetapp\obj\Debug\netcoreapp3.1\com.tweetapp.AssemblyInfoInputs.cache
+C:\Users\RU523LW\source\repos\com.tweetapp\obj\Debug\netcoreapp3.1\com.tweetapp.AssemblyInfo.cs
+C:\Users\RU523LW\source\repos\com.tweetapp\obj\Debug\netcoreapp3.1\com.tweetapp.csproj.CoreCompileInputs.cache
+C:\Users\RU523LW\source\repos\com.tweetapp\obj\Debug\netcoreapp3.1\com.tweetapp.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\RU523LW\source\repos\com.tweetapp\obj\Debug\netcoreapp3.1\com.tweetapp.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\RU523LW\source\repos\com.tweetapp\obj\Debug\netcoreapp3.1\staticwebassets\com.tweetapp.StaticWebAssets.Manifest.cache
+C:\Users\RU523LW\source\repos\com.tweetapp\obj\Debug\netcoreapp3.1\com.tweetapp.RazorTargetAssemblyInfo.cache
+C:\Users\RU523LW\source\repos\com.tweetapp\obj\Debug\netcoreapp3.1\com.tweetapp.csproj.CopyComplete
+C:\Users\RU523LW\source\repos\com.tweetapp\obj\Debug\netcoreapp3.1\com.tweetapp.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\obj\Debug\netcoreapp3.1\com.tweetapp.pdb
+C:\Users\RU523LW\source\repos\com.tweetapp\obj\Debug\netcoreapp3.1\com.tweetapp.genruntimeconfig.cache
