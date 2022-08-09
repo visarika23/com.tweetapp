@@ -127,3 +127,6 @@ C:\Users\RU523LW\source\repos\com.tweetapp\obj\Debug\net6.0\refint\com.tweetapp.
 C:\Users\RU523LW\source\repos\com.tweetapp\obj\Debug\net6.0\com.tweetapp.pdb
 C:\Users\RU523LW\source\repos\com.tweetapp\obj\Debug\net6.0\com.tweetapp.genruntimeconfig.cache
 C:\Users\RU523LW\source\repos\com.tweetapp\obj\Debug\net6.0\ref\com.tweetapp.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\net6.0\log4net.config
+C:\Users\RU523LW\source\repos\com.tweetapp\bin\Debug\net6.0\Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll

@@ -7,7 +7,7 @@ namespace com.tweetapp.Services
 {
     public interface IUserServices
     {
-        public string Register(User user);
+        public bool Register(User user);
         public string Login(Login cred);
         public string ForgotPassword(string username, string password);
         public List<User> GetAllUsers();

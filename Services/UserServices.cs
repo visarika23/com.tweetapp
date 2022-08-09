@@ -13,31 +13,32 @@ namespace com.tweetapp.Services
     {
         private DataValidationServices dataValidationServices=new DataValidationServices();
         private IUserRepository _userRepository;
+        static readonly log4net.ILog _log = log4net.LogManager.GetLogger(typeof(UserServices));
 
         public UserServices(IUserRepository userRepository)
         {
             _userRepository = userRepository;
         }
 
-        public string Register(User user)
+        public bool Register(User user)
         {
             try
             {
+                _log.Info("Registering a user");
+
                 if (string.IsNullOrEmpty(user.FirstName) || string.IsNullOrEmpty(user.Email) || string.IsNullOrEmpty(user.Gender) || string.IsNullOrEmpty(user.Password) || string.IsNullOrEmpty(user.UserName))
                 {
+                    _log.Info("Required fields were empty. Cannot register user");
                     throw new CustomException("Required fields should not be Empty");
                 }
                 var response = _userRepository.AddUser(user);
 
-                if (!string.IsNullOrEmpty(response))
-                    return response;
-                else
-                    return null;
+                return response;
             }
             catch (CustomException ex)
             {
-                Console.WriteLine($"\n {ex.Message}");
-                return null;
+                _log.Info($"\n Exception occured: {ex.Message}");
+                return false;
             }
 
         }
@@ -46,34 +47,35 @@ namespace com.tweetapp.Services
         {
             try
             {
+                _log.Info("Logging in user");
+
                 if (string.IsNullOrEmpty(login.UserName) || string.IsNullOrEmpty(login.Password))
                 {
-                    //Console.WriteLine($"\n Email and Password are required fields.");
-                    //return null;
+                    _log.Info("Required fields were empty. Cannot login user");
                     throw new CustomException("Required fields should not be Empty");
                 }                  
 
                 var getUser = _userRepository.GetByUsername(login.UserName);
 
                 if (getUser == null)
-                    //throw new CustomException($" No account has been found with mail id {user.email}");
-                    //return null;
-                    return $" No account has been found with mail id {login.UserName}";
-
+                {
+                    _log.Info("User not found with username" + login.UserName + ". Cannot login user");
+                    return $"User not found with username {login.UserName}";
+                }
                 else if (getUser.Password == login.Password)
                 {
                     var response = _userRepository.ChangeLoginStatus(login.UserName);
-                    if (response == "Success")
-                        return $" Hi {getUser.FirstName} {getUser.LastName}, You are Logged in now.";
+                    if (response)
+                        return $"{login.UserName} is logged in";
                 }
                 else
-                    Console.WriteLine("\n Wrong Password.");                    
+                    _log.Info("\n Wrong Password.");                    
                 
-                return null;
+                return "Wrong Password";
             }
             catch(CustomException ex)
             {
-               Console.WriteLine($"\n {ex.Message}" );
+               _log.Info($"\n Error occured: {ex.Message}" );
                return null;
             }           
         }   
@@ -82,26 +84,27 @@ namespace com.tweetapp.Services
         {
             try
             {
+                _log.Info("User forgot passowrd.");
                 if (string.IsNullOrEmpty(username))
                 {
-                    Console.WriteLine($"\n Email is a required field.");
-                    return null;
+                    _log.Info("Required fields were empty");
+                    throw new CustomException("Username should not be Empty");
                 }
                 
                 var getUser= _userRepository.GetByUsername(username);
 
                 if(getUser==null)
                 {
-                    Console.WriteLine($"\n No account has been found with mail id {username}");
-                    return null;
+                    _log.Info($"\n No account has been found with username {username}");
+                    return "user not found";
                 }
                 else
                 {
                     var response = _userRepository.ResetPassword(username, password);
-                    if (response == "Success")
-                        return $"Your password has been changed!";
+                    if (response)
+                        return $"password changed";
                     else
-                        return $"Error occured. Passowrd couldn't be updated";
+                        return $"Error occured";
                 }                   
             }
             catch(Exception ex)
@@ -120,12 +123,12 @@ namespace com.tweetapp.Services
                 if (users.Count != 0)
                     return users;
                 else
-                    Console.WriteLine("\n No users yet.");
+                    _log.Info("\n No users yet.");
                     return null;
             }
             catch(Exception ex)
             {
-                Console.WriteLine("\n "+ex.Message);
+                _log.Info("\n "+ex.Message);
                 return null;
             }
             
@@ -140,13 +143,13 @@ namespace com.tweetapp.Services
                     return user;
                 else
                 {
-                    Console.WriteLine("\n User Not Found.");
+                    _log.Info("\n User Not Found.");
                     return null;
                 }                  
             }
             catch (Exception ex)
             {
-                Console.WriteLine("\n " + ex.Message);
+                _log.Info("\n " + ex.Message);
                 return null;
             }
 
@@ -157,14 +160,11 @@ namespace com.tweetapp.Services
             try
             {
                 var response= _userRepository.ChangeLoginStatus(username);
-                if(response.Equals("Success"))
-                    return true;
-                else
-                    return false;
+                return response;
             }
             catch(Exception ex)
             {
-                Console.WriteLine("\n "+ex.Message);
+                _log.Info("\n "+ex.Message);
                 return false;
             }
             

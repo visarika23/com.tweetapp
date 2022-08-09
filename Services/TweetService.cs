@@ -9,25 +9,25 @@ namespace com.tweetapp.Services
     public class TweetService : ITweetService
     {
         private ITweetsRepository _tweetsRepository;
+        static readonly log4net.ILog _log = log4net.LogManager.GetLogger(typeof(TweetService));
+
         public TweetService(ITweetsRepository tweetsRepository)
         {
             _tweetsRepository = tweetsRepository;
         }
         
-        public string PostTweet(Tweet tweet)
+        public bool PostTweet(Tweet tweet)
         {
             try
             {
+                _log.Info("Posting a tweet");
                 var response = _tweetsRepository.AddTweet(tweet);
-                if (!string.IsNullOrEmpty(response))
-                    return response;
-                else
-                    return null;
+                return response;
             }
             catch(Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                return null;
+                _log.Info(ex.Message);
+                return false;
             }
             
         }
@@ -40,12 +40,12 @@ namespace com.tweetapp.Services
                 if (tweets.Count != 0)
                     return tweets;
                 else
-                    Console.WriteLine("\n There are no tweets yet.");
+                    _log.Info("\n There are no tweets yet.");
                 return null;
             }
             catch(Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                _log.Info(ex.Message);
                 return null;
             }
             
@@ -59,65 +59,95 @@ namespace com.tweetapp.Services
                 if (tweets.Count!= 0)
                     return tweets;
                 else
-                    Console.WriteLine("\n You have not posted any tweet yet.");
+                    _log.Info("\n You have not posted any tweet yet.");
                 return null;
             }
             catch(Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                _log.Info(ex.Message);
                 return null;
             }
             
         }
 
-        public void UpdateTweet(Tweet tweet)
+        public bool UpdateTweet(Tweet tweet)
         {
             var getTweet = _tweetsRepository.GetATweetByIdandUsername(tweet.Id, tweet.User.UserName);
             if (getTweet != null)
             {
                 var response =  _tweetsRepository.UpdateATweet(tweet);
+                return response;
+            }
+            else
+            {
+                _log.Info("Tweet not found");
+                return false;
             }
         }
 
-        public void LikeTweet(ObjectId id, string userName)
+        public bool LikeTweet(ObjectId id, string userName)
         {
             var getTweet = _tweetsRepository.GetATweetByIdandUsername(id, userName);
             
             if (getTweet != null)
             {
                 var response = _tweetsRepository.LikeATweet(getTweet);
+                return response;
             }
-                
+            else
+            {
+                _log.Info("Tweet not found");
+                return false;
+            }
+
         }
 
-        public void UnLikeTweet(ObjectId id, string userName)
+        public bool UnLikeTweet(ObjectId id, string userName)
         {
             var getTweet = _tweetsRepository.GetATweetByIdandUsername(id, userName);
 
             if (getTweet != null)
             {
                 var response = _tweetsRepository.UnLikeATweet(getTweet);
+                return response;
+            }
+            else
+            {
+                _log.Info("Tweet not found");
+                return false;
             }
 
         }
 
-        public void ReplyATweet(ObjectId id, string userName, TweetReply reply)
+        public bool ReplyATweet(ObjectId id, string userName, TweetReply reply)
         {
             var getTweet = _tweetsRepository.GetATweetByIdandUsername(id, userName);
 
             if (getTweet != null)
             {
                 var response = _tweetsRepository.ReplyATweet(getTweet,reply);
+                return response;
+            }
+            else
+            {
+                _log.Info("Tweet not found");
+                return false;
             }
         }
 
-        public void DeleteTweet(ObjectId id, string userName)
+        public bool DeleteTweet(ObjectId id, string userName)
         {
             var getTweet = _tweetsRepository.GetATweetByIdandUsername(id, userName);
 
             if (getTweet != null)
             {
-                _tweetsRepository.DeleteATweet(id, userName);
+                var response = _tweetsRepository.DeleteATweet(id, userName);
+                return response;
+            }
+            else
+            {
+                _log.Info("Tweet not found");
+                return false;
             }
 
         }

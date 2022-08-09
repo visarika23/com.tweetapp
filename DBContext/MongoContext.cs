@@ -1,11 +1,13 @@
 ﻿using com.tweetapp.Models;
 using MongoDB.Driver;
+using System;
 
 namespace com.tweetapp.DBContext
 {
     public class MongoContext:IMongoContext
     {
         private IMongoDatabase _database;
+        static readonly log4net.ILog _log = log4net.LogManager.GetLogger(typeof(MongoContext));
         public MongoContext(IMongoDatabase database)
         {
             _database = database;
@@ -16,8 +18,9 @@ namespace com.tweetapp.DBContext
             {
                 return _database.GetCollection<User>("Users");
             }
-            catch
+            catch(Exception ex)
             {
+                _log.Info(ex.Message);
                 return null;
             }
         }
@@ -27,8 +30,9 @@ namespace com.tweetapp.DBContext
             {
                 return _database.GetCollection<Tweet>("Tweets");
             }
-            catch
+            catch (Exception ex)
             {
+                _log.Info(ex.Message);
                 return null;
             }
         }

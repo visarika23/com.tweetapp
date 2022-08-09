@@ -9,227 +9,317 @@ using com.tweetapp.Repository;
 using MongoDB.Bson;
 using com.tweetapp.Services;
 using Microsoft.AspNetCore.Cors;
+using com.tweetapp.Middlewares.Authentication;
+using Microsoft.AspNetCore.Authorization;
 
 namespace com.tweetapp.Controllers
 {
     [EnableCors()]
     [Route("api/v1.0/[controller]")]
     [ApiController]
+    [Authorize]
     public class TweetsController : ControllerBase
     {
-        public ITweetService tweetService;
+        private ITweetService tweetService;
         private IUserServices userServices;
-        public TweetsController(ITweetService tweetService, IUserServices userServices)
+        private IAuthRepo _userAuth;
+        private static string token;
+        static readonly log4net.ILog _log = log4net.LogManager.GetLogger(typeof(TweetsController));
+
+        public TweetsController(ITweetService tweetService, IUserServices userServices, IAuthRepo userAuth)
         {
             this.tweetService = tweetService;
             this.userServices = userServices;
+            _userAuth = userAuth;   
         }
 
-        // GET: api/Tweets
-        [HttpGet("all")]
-        public ObjectResult GetAllTweets()
+        [AllowAnonymous]
+        [HttpPost("login")]
+        public IActionResult Login([FromBody] Login credentials)
         {
             try
             {
-                return Ok(tweetService.ViewAllTweets());
+                var response = userServices.Login(credentials);
+                if(response.Contains($"{credentials.UserName} is logged in"))
+                {
+                    token = _userAuth.GenerateJSONWebToken(credentials.UserName);
+                    return Ok(token);
+                }
+                else if (response.Contains("User not found"))
+                {
+                    return StatusCode(404, new { msg = "User not found" });
+                }
+                else
+                    return StatusCode(400, new { msg = "Password is incorrect" });
+
+            }
+            catch (Exception ex)
+            {
+                _log.Error(ex.Message);
+                return StatusCode(500, new { msg = "Internal server Error", err = ex });
+            }
+
+        }
+
+        [HttpGet("all")]
+        public IActionResult GetAllTweets()
+        {
+            try
+            {
+                var response = tweetService.ViewAllTweets();
+                if(response == null)
+                {
+                    return StatusCode(204, new { msg = "No tweets yet" });
+                }
+                return Ok(response);
             }
             catch(Exception ex)
             {
+                _log.Error(ex.Message);
                 return StatusCode(500, new {msg="Internal server Error",err=ex });
             }
             
         }
 
-        // GET: api/Users/all
         [HttpGet("users/all")]
-        public ObjectResult GetAllUsers()
+        public IActionResult GetAllUsers()
         {
             try
             {
-                return Ok(userServices.GetAllUsers());
+                var response = userServices.GetAllUsers();
+                if (response == null)
+                {
+                    return StatusCode(204, new { msg = "No users registered yet" });
+                }
+                return Ok(response);
+ 
             }
             catch (Exception ex)
             {
+                _log.Error(ex.Message);
                 return StatusCode(500, new { msg = "Internal server Error", err = ex });
             }
 
         }
 
         [HttpGet("user/search/{username}")]
-        public ObjectResult GetAUser([FromQuery] string userName)
+        public IActionResult GetAUser([FromQuery] string userName)
         {
             try
             {
-                return Ok(userServices.GetAUser(userName));
+                var response = userServices.GetAUser(userName);
+                if (response == null)
+                {
+                    return StatusCode(204, new { msg = "No user found" });
+                }
+                return Ok(response);
             }
             catch (Exception ex)
             {
+                _log.Error(ex.Message);
                 return StatusCode(500, new { msg = "Internal server Error", err = ex });
             }
 
         }
 
         [HttpGet("{username}")]
-        public ObjectResult GetAllTweetsOfAUser([FromQuery] string userName)
+        public IActionResult GetAllTweetsOfAUser([FromQuery] string userName)
         {
             try
             {
-                return Ok(tweetService.ViewMyTweets(userName));
+                var response = tweetService.ViewMyTweets(userName);
+                if (response == null)
+                {
+                    return StatusCode(204, new { msg = "You don't have any tweets yet" });
+                }
+                return Ok(response);
             }
             catch(Exception ex)
             {
+                _log.Error(ex.Message);
                 return StatusCode(404, new {msg="User Not Found",err=ex });
             }
             
         }
 
-        [HttpPost("login")]
-        public ObjectResult Login([FromBody] Login credentials)
-        {
-            try
-            {
-                var response = userServices.Login(credentials);
-                if (!string.IsNullOrEmpty(response))
-                    return Ok(response);
-                else
-                    return StatusCode(404, new { msg = "Username/password is incorrect" });
-
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, new { msg = "Internal server Error", err = ex });
-            }
-
-        }
-
-        // POST: api/Users
+        [AllowAnonymous]
         [HttpPost("register")]
-        public ObjectResult Register([FromBody] User user)
+        public IActionResult Register([FromBody] User user)
         {
             try
             {
-                userServices.Register(user);
-                return Ok(new { msg = "User added successfully" });
+                var response = userServices.Register(user);
+                if (response)
+                {
+                    _log.Info("User added Succesfully");
+                    return Ok(new { msg = "User registered successfully" });
+                }
+                else
+                    return StatusCode(400, new { msg = "User cannot be registered" });
             }
             catch (Exception ex)
             {
+                _log.Error(ex.Message);
                 return StatusCode(500, new { msg = "Internal server Error", err = ex });
             }
 
         }
 
-
-        // POST: api/Tweets
         [HttpPost("{username}/add")]
-        public ObjectResult PostNewTweet(string username,[FromBody] Tweet tweet)
+        public IActionResult PostNewTweet(string username,[FromBody] Tweet tweet)
         {
             try
             {
                 tweet.User.UserName = username;
-                tweetService.PostTweet(tweet);
-                return Ok(new { msg = "Successfully added." });
+                var response = tweetService.PostTweet(tweet);
+                if (response)
+                {
+                    _log.Info("Tweet posted Succesfully");
+                    return Ok(new { msg = "Tweet posted successfully" });
+                }
+                else
+                    return StatusCode(400, new { msg = "Tweet could not be posted" });
             }
             catch(Exception ex)
             {
+                _log.Error(ex.Message);
                 return StatusCode(500, new { msg = "Internal server error.",err = ex });
             }
             
         }
 
         [HttpPost("{username}/reply/{id}")]
-        public ObjectResult Reply([FromQuery] string username, string id, [FromBody] TweetReply reply)
+        public IActionResult Reply([FromQuery] string username, string id, [FromBody] TweetReply reply)
         {
             try
             {
-                tweetService.ReplyATweet(ObjectId.Parse(id), username, reply);
-                return Ok(new { msg = "Replied added to the tweet." });
+                var response = tweetService.ReplyATweet(ObjectId.Parse(id), username, reply);
+                if (response)
+                {
+                    _log.Info("Reply added to tweet");
+                    return Ok(new { msg = "Reply posted" });
+                }
+                else
+                    return StatusCode(400, new { msg = "Reply cannot be added to tweet" });
             }
             catch (Exception ex)
             {
+                _log.Error(ex.Message);
                 return StatusCode(500, new { msg = "Internal server error.", err = ex });
             }
         }
 
         [HttpPut("{username}/forgot")]
-        public ObjectResult Forgot([FromQuery] string username, [FromBody] string password)
+        public IActionResult Forgot([FromQuery] string username, [FromBody] string password)
         {
             try
             {
                 var response = userServices.ForgotPassword(username, password);
-                if (response == null)
+                if (response.Contains("user not found"))
                 {
-                    return Ok(new { response = "User Not Found" });
+                    return StatusCode(400, new { msg = "User not found" });
+                }
+                else if(response.Contains("password changed"))
+                {
+                    return Ok(new { response = "Your password has been updated" });
                 }
                 else
                 {
-                    return Ok(new { response = "Success" });
+                    return StatusCode(400, new { msg = "Password cannot be updated" });
                 }
             }
             catch (Exception ex)
             {
+                _log.Error(ex.Message);
                 return StatusCode(500, new { msg = "Internal server Error", err = ex });
             }
 
         }
 
-        // PUT: api/Tweets/5
         [HttpPut("{username}/update/{id}")]
-        public ObjectResult UpdateAtweet([FromQuery] string username,string id, [FromBody] Tweet tweet)
+        public IActionResult UpdateAtweet([FromQuery] string username,string id, [FromBody] Tweet tweet)
         {
             try
             {
                 tweet.Id = ObjectId.Parse(id);
                 tweet.User.UserName = username;
-                tweetService.UpdateTweet(tweet);
-                return Ok(new { msg = "Successfully Updated" });
+                var response = tweetService.UpdateTweet(tweet);
+                if (response)
+                {
+                    _log.Info("Tweet is updated");
+                    return Ok(new { msg = "Tweet is updated" });
+                }
+                else
+                    return StatusCode(400, new { msg = "Tweet cannot be updated" });
             }
             catch(Exception ex)
             {
+                _log.Error(ex.Message);
                 return StatusCode(500, new { msg = "Internal server error.", err = ex });
             }
         }
 
         [HttpPut("{username}/like/{id}")]
-        public ObjectResult Like([FromQuery] string username, string id)
+        public IActionResult Like([FromQuery] string username, string id)
         {
             try
-            {
-                tweetService.LikeTweet(ObjectId.Parse(id), username);
-                return Ok(new { msg = "Successfully Liked." });
+            {       
+                var response = tweetService.LikeTweet(ObjectId.Parse(id), username);
+                if (response)
+                {
+                    _log.Info("Tweet is successfully Liked");
+                    return Ok(new { msg = "Successfully Liked" });
+                }
+                else
+                    return StatusCode(400, new { msg = "Tweet cannot be liked" });
             }
             catch (Exception ex)
             {
+                _log.Error(ex.Message);
                 return StatusCode(500, new { msg = "Internal server error.", err = ex });
             }
 
         }
 
         [HttpPut("{username}/unlike/{id}")]
-        public ObjectResult UnLike([FromQuery] string username, string id)
+        public IActionResult UnLike([FromQuery] string username, string id)
         {
             try
-            {
-                tweetService.UnLikeTweet(ObjectId.Parse(id), username);
-                return Ok(new { msg = "Successfully UnLiked." });
+            {                
+                var response = tweetService.UnLikeTweet(ObjectId.Parse(id), username);
+                if (response)
+                {
+                    _log.Info("Tweet is successfully unliked");
+                    return Ok(new { msg = "Successfully UnLiked" });
+                }
+                else
+                    return StatusCode(400, new { msg = "Tweet cannot be unliked" });
             }
             catch (Exception ex)
             {
+                _log.Error(ex.Message);
                 return StatusCode(500, new { msg = "Internal server error.", err = ex });
             }
 
         }
 
-        // DELETE: api/ApiWithActions/5
         [HttpDelete("{username}/delete/{id}")]
-        public ObjectResult Delete(string username, string id)
+        public IActionResult Delete(string username, string id)
         {
             try
-            {
-                tweetService.DeleteTweet(ObjectId.Parse(id), username);
-                return Ok(new { msg = "Successfully Deleted." });
+            {       
+                var response = tweetService.DeleteTweet(ObjectId.Parse(id), username);
+                if (response)
+                {
+                    _log.Info("Tweet is successfully deletd");
+                    return Ok(new { msg = "Successfully deleted" });
+                }
+                else
+                    return StatusCode(400, new { msg = "Tweet cannot be deleted" });
             }
             catch (Exception ex)
             {
+                _log.Error(ex.Message);
                 return StatusCode(500, new { msg = "Internal server error.", err = ex });
             }
 

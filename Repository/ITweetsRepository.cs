@@ -11,12 +11,12 @@ namespace com.tweetapp.Repository
         public List<Tweet> GetAllTweets();
         public List<Tweet> GetMyTweets(string username);
         public Tweet GetATweetByIdandUsername(ObjectId id, string userName);
-        public string AddTweet(Tweet tweet);
-        public string UpdateATweet(Tweet tweet);
-        public string LikeATweet(Tweet tweet);
-        public string UnLikeATweet(Tweet tweet);
-        public string ReplyATweet(Tweet tweet, TweetReply reply);
-        public void DeleteATweet(ObjectId id, string username);
+        public bool AddTweet(Tweet tweet);
+        public bool UpdateATweet(Tweet tweet);
+        public bool LikeATweet(Tweet tweet);
+        public bool UnLikeATweet(Tweet tweet);
+        public bool ReplyATweet(Tweet tweet, TweetReply reply);
+        public bool DeleteATweet(ObjectId id, string username);
 
     }
 }

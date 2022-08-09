@@ -15,6 +15,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using log4net;
 
 namespace com.tweetapp
 {
@@ -37,10 +38,11 @@ namespace com.tweetapp
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IUserServices, UserServices>();
 
-           /* var key = Encoding.UTF8.GetBytes(Configuration["Jwt:Key"]);
+            var key = Encoding.UTF8.GetBytes(Configuration["Jwt:Key"]);
 
 
-            services.AddMvc(config => {
+            services.AddMvc(config =>
+            {
                 var policy = new AuthorizationPolicyBuilder()
                                 .RequireAuthenticatedUser()
                                 .Build();
@@ -60,7 +62,7 @@ namespace com.tweetapp
                          ValidAudience = Configuration["Jwt:Issuer"],
                          IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Jwt:Key"]))
                      };
-                 });*/
+                 });
 
             services.AddControllers();
 
@@ -73,24 +75,27 @@ namespace com.tweetapp
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            loggerFactory.AddLog4Net();
+
+/*            app.UseHttpsRedirection();
+
+            app.UseRouting();*/
             
-
-            app.UseHttpsRedirection();
-
-            app.UseRouting();
             //app.UseCors(builder => builder.WithOrigins("*").AllowAnyHeader());
-            //app.UsePreflightRequestHandler();
+
             app.UseCors(builder => {
                 builder.AllowAnyOrigin();
                 builder.AllowAnyMethod();
                 builder.AllowAnyHeader();
             });
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

@@ -8,13 +8,13 @@ namespace com.tweetapp.Services
 {
     public interface ITweetService
     {
-        public string PostTweet(Tweet tweet);
+        public bool PostTweet(Tweet tweet);
         public List<Tweet> ViewMyTweets(string email);
         public List<Tweet> ViewAllTweets();
-        public void UpdateTweet(Tweet tweet);
-        public void ReplyATweet(ObjectId id, string userName, TweetReply reply);
-        public void LikeTweet(ObjectId id, string userName);
-        public void UnLikeTweet(ObjectId id, string userName);
-        public void DeleteTweet(ObjectId id, string userName);
+        public bool UpdateTweet(Tweet tweet);
+        public bool ReplyATweet(ObjectId id, string userName, TweetReply reply);
+        public bool LikeTweet(ObjectId id, string userName);
+        public bool UnLikeTweet(ObjectId id, string userName);
+        public bool DeleteTweet(ObjectId id, string userName);
     }
 }

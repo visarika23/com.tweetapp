@@ -15,6 +15,7 @@ namespace com.tweetapp.Repository
         private readonly IMongoCollection<Tweet> collection;
         private IMongoDatabase database;
         private List<Tweet> allTweets = new List<Tweet>();
+        static readonly log4net.ILog _log = log4net.LogManager.GetLogger(typeof(TweetsRepository));
 
         public TweetsRepository(IConfiguration configuration)
         {
@@ -27,12 +28,14 @@ namespace com.tweetapp.Repository
         {
             try
             {
+                _log.Info("Fetching all tweets from database");
+
                 var tweets = collection.Find(_ => true).ToList();
                 return tweets;
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"\n Exception Occured: {ex.Message}");
+                _log.Info($"\n Exception Occured: {ex.Message}");
                 return null;
             }
 
@@ -42,98 +45,107 @@ namespace com.tweetapp.Repository
         {
             try
             {
-                var tweet = collection.Find(t => t.User.UserName == username).ToList();
-                return tweet;
+                _log.Info("Fetching a user's all tweets from database");
+
+                allTweets = collection.Find(t => t.User.UserName == username).ToList();
+                return allTweets;
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"\n Exception Occured: {ex.Message}");
+                _log.Info($"\n Exception Occured: {ex.Message}");
                 return null;
             }
 
         }
         public Tweet GetATweetByIdandUsername(ObjectId id, string userName)
         {
+            _log.Info("Fetching a tweet from database");
             var getTweet = collection.Find(t => t.Id == id && t.User.UserName == userName).FirstOrDefault();
             return getTweet;
 
         }
 
-        public string AddTweet(Tweet tweet)
+        public bool AddTweet(Tweet tweet)
         {
             try
             {
+                _log.Info("adding tweets to database"); 
+
                 collection.InsertOne(tweet);
-                return "\n Tweet Posted";
+                return true;
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"\n Exception Occured: {ex.Message}");
-                return null;
+                _log.Info($"\n Exception Occured: {ex.Message}");
+                return false;
             }
 
         }
-        public string UpdateATweet(Tweet tweet)
+        public bool UpdateATweet(Tweet tweet)
         {
             try
             {
+                _log.Info("Updating a tweet");
                 var filter = Builders<Tweet>.Filter.Eq(p => p.TweetId, tweet.TweetId);
                 var update = Builders<Tweet>.Update.Set(p => p.Message, tweet.Message);
                 var result = collection.FindOneAndUpdate(filter, update);
                 /*            var options = new UpdateOptions { IsUpsert = true };
                             collection.UpdateOne(filter, update, options);*/
-                return "Success";
+                return true;
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"\n Exception Occured: {ex.Message}");
-                return null;
+                _log.Info($"\n Exception Occured: {ex.Message}");
+                return false;
             }           
         }
 
 
-        public string LikeATweet(Tweet tweet)
+        public bool LikeATweet(Tweet tweet)
         {
             try
             {
+                _log.Info("Liking a tweet");
                 var t = GetATweetByIdandUsername(tweet.Id, tweet.User.UserName);
                 t.Likes++;
                 var filter = Builders<Tweet>.Filter.Eq(p => p.TweetId, tweet.TweetId);
                 var update = Builders<Tweet>.Update.Set(p => p, t);
                 var result = collection.FindOneAndUpdate(filter, update);
 
-                return "Success";
+                return true;
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"\n Exception Occured: {ex.Message}");
-                return null;
+                _log.Info($"\n Exception Occured: {ex.Message}");
+                return false;
             }
         }
 
-        public string UnLikeATweet(Tweet tweet)
+        public bool UnLikeATweet(Tweet tweet)
         {
             try
             {
+                _log.Info("Unliking a tweet");
                 var t = GetATweetByIdandUsername(tweet.Id, tweet.User.UserName);
                 t.Likes--;
                 var filter = Builders<Tweet>.Filter.Eq(p => p.TweetId, tweet.TweetId);
                 var update = Builders<Tweet>.Update.Set(p => p, t);
                 var result = collection.FindOneAndUpdate(filter, update);
 
-                return "Success";
+                return true;
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"\n Exception Occured: {ex.Message}");
-                return null;
+                _log.Info($"\n Exception Occured: {ex.Message}");
+                return false;
             }
         }
 
-        public string ReplyATweet(Tweet tweet, TweetReply reply)
+        public bool ReplyATweet(Tweet tweet, TweetReply reply)
         {
             try
             {
+                _log.Info("replying a tweet");
                 var t = collection.Find(t => t.TweetId == tweet.TweetId).FirstOrDefault();
                 t.Reply.Add(reply);
 
@@ -142,18 +154,20 @@ namespace com.tweetapp.Repository
 
                 var result = collection.FindOneAndUpdate(filter, update);
 
-                return "Success";
+                return true;
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"\n Exception Occured: {ex.Message}");
-                return null;
+                _log.Info($"\n Exception Occured: {ex.Message}");
+                return false;
             }
         }
 
-        public void DeleteATweet(ObjectId id, string username)
+        public bool DeleteATweet(ObjectId id, string username)
         {
+            _log.Info("Deleting a tweet");
             var response = collection.DeleteOne(t => t.Id == id && t.User.UserName == username);
+            return true;
         }
     }
 }

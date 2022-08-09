@@ -15,7 +15,7 @@ namespace com.tweetapp.Repository
         private readonly IMongoCollection<User> collection;
         private IMongoDatabase database;
         private List<User> allUsers = new List<User>();
-        static readonly log4net.ILog _log4net = log4net.LogManager.GetLogger(typeof(UserRepository));
+        static readonly log4net.ILog _log = log4net.LogManager.GetLogger(typeof(UserRepository));
 
         public UserRepository(IConfiguration configuration)
         {
@@ -28,12 +28,14 @@ namespace com.tweetapp.Repository
         {
             try
             {
+                _log.Info("Fetching all users from database");
+
                 allUsers = collection.Find(_ => true).ToList();
                 return allUsers;
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"\n Exception Occured: {ex.Message}");
+                _log.Info($"\n Exception Occured: {ex.Message}");
                 return null;
             }
         }
@@ -41,57 +43,65 @@ namespace com.tweetapp.Repository
         {
             try
             {
+                _log.Info("Fetching a user from database");
+
                 var user = collection.Find(s => s.UserName == username).FirstOrDefault();
                 return user;
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"\n Exception Occured: {ex.Message}");
+                _log.Info($"\n Exception Occured: {ex.Message}");
                 return null;
             }
         }
 
-        public string AddUser(User user)
+        public bool AddUser(User user)
         {
             try
             {
+                _log.Info("Adding a user to database");
+
                 collection.InsertOne(user);
-                return $"\n Hi {user.FirstName} {user.LastName}, Your Account has been created Successfully.";
+                return true;
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"\n Exception Occured: {ex.Message}");
-                return null;
+                _log.Info($"\n Exception Occured: {ex.Message}");
+                return false;
             }
         }
 
-        public string ResetPassword(string username, string password)
+        public bool ResetPassword(string username, string password)
         {
             try
             {
+                _log.Info("Resetting user password");
+
                 collection.FindOneAndUpdate<User>(Builders<User>.Filter.Eq(s => s.UserName, username),
                 Builders<User>.Update.Set(s => s.Password, password));
-                return $" Password Updated";
+                return true;
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"\n Exception Occured: {ex.Message}");
-                return null;
+                _log.Info($"\n Exception Occured: {ex.Message}");
+                return false;
             }
         }
 
-        public string ChangeLoginStatus(string username)
+        public bool ChangeLoginStatus(string username)
         {
             try
             {
+                _log.Info("Changing log in status of user to true");
+
                 collection.FindOneAndUpdate<User>(Builders<User>.Filter.Eq(s => s.UserName, username),
                 Builders<User>.Update.Set(s => s.IsLoggedIn, true));
-                return "Success";
+                return true;
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"\n Exception Occured: {ex.Message}");
-                return null;
+                _log.Info($"\n Exception Occured: {ex.Message}");
+                return false;
             }
         }
     }
