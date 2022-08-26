@@ -16,6 +16,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using log4net;
+using com.tweetapp.Middlewares.Authentication;
 
 namespace com.tweetapp
 {
@@ -37,6 +38,8 @@ namespace com.tweetapp
 
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IUserServices, UserServices>();
+
+            services.AddScoped<IAuthRepo, AuthRepo>();
 
             var key = Encoding.UTF8.GetBytes(Configuration["Jwt:Key"]);
 
@@ -84,12 +87,13 @@ namespace com.tweetapp
 
             loggerFactory.AddLog4Net();
 
-/*            app.UseHttpsRedirection();
+            /*            app.UseHttpsRedirection();
 
-            app.UseRouting();*/
-            
+                        app.UseRouting();*/
+
             //app.UseCors(builder => builder.WithOrigins("*").AllowAnyHeader());
 
+            app.UseRouting();
             app.UseCors(builder => {
                 builder.AllowAnyOrigin();
                 builder.AllowAnyMethod();
@@ -100,8 +104,12 @@ namespace com.tweetapp
 
             app.UseEndpoints(endpoints =>
             {
-               endpoints.MapControllers();
+                endpoints.MapControllers();
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Tweets}/{action=Register}");
             });
+
 
             app.UseSwagger();
             app.UseSwaggerUI(c =>
