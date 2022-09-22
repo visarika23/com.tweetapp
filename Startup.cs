@@ -17,6 +17,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using log4net;
 using com.tweetapp.Middlewares.Authentication;
+using com.tweetapp.DBContext;
 
 namespace com.tweetapp
 {
@@ -32,8 +33,19 @@ namespace com.tweetapp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.Configure<TweetsDatabaseSettings>(
+               Configuration.GetSection(nameof(TweetsDatabaseSettings)));
 
-            services.AddSingleton<ITweetsRepository, TweetsRepository>();
+            services.AddSingleton<ITweetsDatabaseSettings>(sp =>
+                sp.GetRequiredService<IOptions<TweetsDatabaseSettings>>().Value);
+
+            services.Configure<UsersDatabaseSettings>(
+               Configuration.GetSection(nameof(UsersDatabaseSettings)));
+
+            services.AddSingleton<IUsersDatabaseSettings>(sp =>
+                sp.GetRequiredService<IOptions<UsersDatabaseSettings>>().Value);
+
+            services.AddScoped<ITweetsRepository, TweetsRepository>();
             services.AddScoped<ITweetService, TweetService>();
 
             services.AddScoped<IUserRepository, UserRepository>();

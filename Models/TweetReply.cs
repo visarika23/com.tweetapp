@@ -9,7 +9,8 @@ namespace com.tweetapp.Models
         [BsonId]
         public ObjectId ReplyId { get; set; }
         public string ReplyMessage { get; set; }
-        public User User { get; set; }
+        public string UserName { get; set; }
+        public string FirstName { get; set; }
         public DateTime TimeStamp { get; set; }
     }
 }

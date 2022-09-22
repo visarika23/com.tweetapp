@@ -8,6 +8,7 @@ namespace com.tweetapp.DBContext
     {
         private IMongoDatabase _database;
         static readonly log4net.ILog _log = log4net.LogManager.GetLogger(typeof(MongoContext));
+
         public MongoContext(IMongoDatabase database)
         {
             _database = database;
@@ -20,7 +21,7 @@ namespace com.tweetapp.DBContext
             }
             catch(Exception ex)
             {
-                _log.Info(ex.Message);
+                _log.Error(ex.Message);
                 return null;
             }
         }
@@ -32,7 +33,7 @@ namespace com.tweetapp.DBContext
             }
             catch (Exception ex)
             {
-                _log.Info(ex.Message);
+                _log.Error(ex.Message);
                 return null;
             }
         }

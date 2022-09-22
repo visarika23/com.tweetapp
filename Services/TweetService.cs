@@ -26,7 +26,7 @@ namespace com.tweetapp.Services
             }
             catch(Exception ex)
             {
-                _log.Info(ex.Message);
+                _log.Error(ex.Message);
                 return false;
             }
             
@@ -40,7 +40,7 @@ namespace com.tweetapp.Services
                 if (tweets.Count != 0)
                     return tweets;
                 else
-                    _log.Info("\n There are no tweets yet.");
+                    _log.Error("\n There are no tweets yet.");
                 return null;
             }
             catch(Exception ex)
@@ -64,7 +64,7 @@ namespace com.tweetapp.Services
             }
             catch(Exception ex)
             {
-                _log.Info(ex.Message);
+                _log.Error(ex.Message);
                 return null;
             }
             
@@ -72,7 +72,7 @@ namespace com.tweetapp.Services
 
         public bool UpdateTweet(Tweet tweet)
         {
-            var getTweet = _tweetsRepository.GetATweetByIdandUsername(tweet.Id, tweet.User.UserName);
+            var getTweet = _tweetsRepository.GetATweetByIdandUsername(tweet.Id, tweet.UserName);
             if (getTweet != null)
             {
                 var response =  _tweetsRepository.UpdateATweet(tweet);
@@ -80,7 +80,7 @@ namespace com.tweetapp.Services
             }
             else
             {
-                _log.Info("Tweet not found");
+                _log.Error("Tweet not found");
                 return false;
             }
         }
@@ -96,7 +96,7 @@ namespace com.tweetapp.Services
             }
             else
             {
-                _log.Info("Tweet not found");
+                _log.Error("Tweet not found");
                 return false;
             }
 
@@ -113,7 +113,7 @@ namespace com.tweetapp.Services
             }
             else
             {
-                _log.Info("Tweet not found");
+                _log.Error("Tweet not found");
                 return false;
             }
 
@@ -130,7 +130,7 @@ namespace com.tweetapp.Services
             }
             else
             {
-                _log.Info("Tweet not found");
+                _log.Error("Tweet not found");
                 return false;
             }
         }
@@ -146,7 +146,7 @@ namespace com.tweetapp.Services
             }
             else
             {
-                _log.Info("Tweet not found");
+                _log.Error("Tweet not found");
                 return false;
             }
 

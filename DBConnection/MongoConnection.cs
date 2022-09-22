@@ -12,21 +12,18 @@ namespace com.tweetapp.DBConnection
         {
             configuration = config;
         }
-        public static IMongoDatabase GetDatabase()
+        public static IMongoDatabase GetDatabase(string dbName)
         {
             try
             {
                 _log.Info("Setting up DB connection");
-                //string connectionString = configuration.GetConnectionString("ConnectionString");
-                //string dbName = configuration.GetValue<string>("Database");
-                string connectionString = "mongodb+srv://visarika:visarika23@cluster0.45eue.mongodb.net/?retryWrites=true&w=majority";
-                string dbName = "TweetAppDB";
+                string connectionString = configuration.GetConnectionString(dbName);
                 MongoClient client = new MongoClient(connectionString);
                 return client.GetDatabase(dbName);
             }
             catch(Exception ex)
             {
-                _log.Info(ex.Message);
+                _log.Error(ex.Message);
                 return null;
             }
             

@@ -17,11 +17,11 @@ namespace com.tweetapp.Repository
         private List<Tweet> allTweets = new List<Tweet>();
         static readonly log4net.ILog _log = log4net.LogManager.GetLogger(typeof(TweetsRepository));
 
-        public TweetsRepository(IConfiguration configuration)
+        public TweetsRepository(ITweetsDatabaseSettings settings)
         {
-            _configuration = configuration;
-            database = MongoConnection.GetDatabase();
-            collection = database.GetCollection<Tweet>(_configuration.GetValue<string>("TweetCollection"));
+            var client = new MongoClient(settings.ConnectionString);
+            var database = client.GetDatabase(settings.Database);
+            collection = database.GetCollection<Tweet>(settings.TweetsCollection);
         }
 
         public List<Tweet> GetAllTweets()
@@ -35,7 +35,7 @@ namespace com.tweetapp.Repository
             }
             catch (Exception ex)
             {
-                _log.Info($"\n Exception Occured: {ex.Message}");
+                _log.Error($"\n Exception Occured: {ex.Message}");
                 return null;
             }
 
@@ -47,12 +47,12 @@ namespace com.tweetapp.Repository
             {
                 _log.Info("Fetching a user's all tweets from database");
 
-                allTweets = collection.Find(t => t.User.UserName == username).ToList();
+                allTweets = collection.Find(t => t.UserName == username).ToList();
                 return allTweets;
             }
             catch (Exception ex)
             {
-                _log.Info($"\n Exception Occured: {ex.Message}");
+                _log.Error($"\n Exception Occured: {ex.Message}");
                 return null;
             }
 
@@ -60,7 +60,7 @@ namespace com.tweetapp.Repository
         public Tweet GetATweetByIdandUsername(ObjectId id, string userName)
         {
             _log.Info("Fetching a tweet from database");
-            var getTweet = collection.Find(t => t.Id == id && t.User.UserName == userName).FirstOrDefault();
+            var getTweet = collection.Find(t => t.Id == id && t.UserName == userName).FirstOrDefault();
             return getTweet;
 
         }
@@ -76,7 +76,7 @@ namespace com.tweetapp.Repository
             }
             catch (Exception ex)
             {
-                _log.Info($"\n Exception Occured: {ex.Message}");
+                _log.Error($"\n Exception Occured: {ex.Message}");
                 return false;
             }
 
@@ -86,7 +86,7 @@ namespace com.tweetapp.Repository
             try
             {
                 _log.Info("Updating a tweet");
-                var filter = Builders<Tweet>.Filter.Eq(p => p.TweetId, tweet.TweetId);
+                var filter = Builders<Tweet>.Filter.Eq(p => p.Id, tweet.Id);
                 var update = Builders<Tweet>.Update.Set(p => p.Message, tweet.Message);
                 var result = collection.FindOneAndUpdate(filter, update);
                 /*            var options = new UpdateOptions { IsUpsert = true };
@@ -95,7 +95,7 @@ namespace com.tweetapp.Repository
             }
             catch (Exception ex)
             {
-                _log.Info($"\n Exception Occured: {ex.Message}");
+                _log.Error($"\n Exception Occured: {ex.Message}");
                 return false;
             }           
         }
@@ -106,9 +106,9 @@ namespace com.tweetapp.Repository
             try
             {
                 _log.Info("Liking a tweet");
-                var t = GetATweetByIdandUsername(tweet.Id, tweet.User.UserName);
+                var t = GetATweetByIdandUsername(tweet.Id, tweet.UserName);
                 t.Likes++;
-                var filter = Builders<Tweet>.Filter.Eq(p => p.TweetId, tweet.TweetId);
+                var filter = Builders<Tweet>.Filter.Eq(p => p.Id, tweet.Id);
                 var update = Builders<Tweet>.Update.Set(p => p, t);
                 var result = collection.FindOneAndUpdate(filter, update);
 
@@ -116,7 +116,7 @@ namespace com.tweetapp.Repository
             }
             catch (Exception ex)
             {
-                _log.Info($"\n Exception Occured: {ex.Message}");
+                _log.Error($"\n Exception Occured: {ex.Message}");
                 return false;
             }
         }
@@ -126,9 +126,9 @@ namespace com.tweetapp.Repository
             try
             {
                 _log.Info("Unliking a tweet");
-                var t = GetATweetByIdandUsername(tweet.Id, tweet.User.UserName);
+                var t = GetATweetByIdandUsername(tweet.Id, tweet.UserName);
                 t.Likes--;
-                var filter = Builders<Tweet>.Filter.Eq(p => p.TweetId, tweet.TweetId);
+                var filter = Builders<Tweet>.Filter.Eq(p => p.Id, tweet.Id);
                 var update = Builders<Tweet>.Update.Set(p => p, t);
                 var result = collection.FindOneAndUpdate(filter, update);
 
@@ -136,7 +136,7 @@ namespace com.tweetapp.Repository
             }
             catch (Exception ex)
             {
-                _log.Info($"\n Exception Occured: {ex.Message}");
+                _log.Error($"\n Exception Occured: {ex.Message}");
                 return false;
             }
         }
@@ -146,10 +146,10 @@ namespace com.tweetapp.Repository
             try
             {
                 _log.Info("replying a tweet");
-                var t = collection.Find(t => t.TweetId == tweet.TweetId).FirstOrDefault();
+                var t = collection.Find(t => t.Id == tweet.Id).FirstOrDefault();
                 t.Reply.Add(reply);
 
-                var filter = Builders<Tweet>.Filter.Eq(t => t.TweetId, tweet.TweetId);
+                var filter = Builders<Tweet>.Filter.Eq(t => t.Id, tweet.Id);
                 var update = Builders<Tweet>.Update.Set(p => p, t);
 
                 var result = collection.FindOneAndUpdate(filter, update);
@@ -158,7 +158,7 @@ namespace com.tweetapp.Repository
             }
             catch (Exception ex)
             {
-                _log.Info($"\n Exception Occured: {ex.Message}");
+                _log.Error($"\n Exception Occured: {ex.Message}");
                 return false;
             }
         }
@@ -166,7 +166,7 @@ namespace com.tweetapp.Repository
         public bool DeleteATweet(ObjectId id, string username)
         {
             _log.Info("Deleting a tweet");
-            var response = collection.DeleteOne(t => t.Id == id && t.User.UserName == username);
+            var response = collection.DeleteOne(t => t.Id == id && t.UserName == username);
             return true;
         }
     }

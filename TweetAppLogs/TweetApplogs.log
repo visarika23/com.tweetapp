@@ -1,0 +1,20 @@
+INFO  11:41:55 Application started. Press Ctrl+C to shut down.
+INFO  11:41:55 Application started. Press Ctrl+C to shut down.
+INFO  11:41:55 Hosting environment: Development
+INFO  11:41:55 Hosting environment: Development
+INFO  11:41:55 Content root path: C:\Users\RU523LW\source\repos\TweetApp\com.tweetapp
+INFO  11:41:55 Content root path: C:\Users\RU523LW\source\repos\TweetApp\com.tweetapp
+INFO  11:43:56 Fetching a tweet from database
+INFO  11:43:57 replying a tweet
+INFO  11:44:18 
+ Exception Occured: Object reference not set to an instance of an object.
+INFO  11:45:32 Application started. Press Ctrl+C to shut down.
+INFO  11:45:32 Application started. Press Ctrl+C to shut down.
+INFO  11:45:32 Hosting environment: Development
+INFO  11:45:32 Hosting environment: Development
+INFO  11:45:32 Content root path: C:\Users\RU523LW\source\repos\TweetApp\com.tweetapp
+INFO  11:45:32 Content root path: C:\Users\RU523LW\source\repos\TweetApp\com.tweetapp
+INFO  11:46:13 Fetching a tweet from database
+INFO  11:46:14 replying a tweet
+ERROR 11:46:19 
+ Exception Occured: Object reference not set to an instance of an object.

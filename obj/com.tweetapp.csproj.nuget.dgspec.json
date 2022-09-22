@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\RU523LW\\source\\repos\\com.tweetapp\\com.tweetapp.csproj": {}
+    "C:\\Users\\RU523LW\\source\\repos\\TweetApp\\com.tweetapp\\com.tweetapp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\RU523LW\\source\\repos\\com.tweetapp\\com.tweetapp.csproj": {
+    "C:\\Users\\RU523LW\\source\\repos\\TweetApp\\com.tweetapp\\com.tweetapp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\RU523LW\\source\\repos\\com.tweetapp\\com.tweetapp.csproj",
+        "projectUniqueName": "C:\\Users\\RU523LW\\source\\repos\\TweetApp\\com.tweetapp\\com.tweetapp.csproj",
         "projectName": "com.tweetapp",
-        "projectPath": "C:\\Users\\RU523LW\\source\\repos\\com.tweetapp\\com.tweetapp.csproj",
+        "projectPath": "C:\\Users\\RU523LW\\source\\repos\\TweetApp\\com.tweetapp\\com.tweetapp.csproj",
         "packagesPath": "C:\\Users\\RU523LW\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\RU523LW\\source\\repos\\com.tweetapp\\obj\\",
+        "outputPath": "C:\\Users\\RU523LW\\source\\repos\\TweetApp\\com.tweetapp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\RU523LW\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -95,7 +95,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.303\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.304\\RuntimeIdentifierGraph.json"
         }
       }
     }

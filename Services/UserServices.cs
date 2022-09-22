@@ -37,7 +37,7 @@ namespace com.tweetapp.Services
             }
             catch (CustomException ex)
             {
-                _log.Info($"\n Exception occured: {ex.Message}");
+                _log.Error($"\n Exception occured: {ex.Message}");
                 return false;
             }
 
@@ -51,7 +51,7 @@ namespace com.tweetapp.Services
 
                 if (string.IsNullOrEmpty(login.UserName) || string.IsNullOrEmpty(login.Password))
                 {
-                    _log.Info("Required fields were empty. Cannot login user");
+                    _log.Error("Required fields were empty. Cannot login user");
                     throw new CustomException("Required fields should not be Empty");
                 }                  
 
@@ -59,7 +59,7 @@ namespace com.tweetapp.Services
 
                 if (getUser == null)
                 {
-                    _log.Info("User not found with username" + login.UserName + ". Cannot login user");
+                    _log.Error("User not found with username" + login.UserName + ". Cannot login user");
                     return $"User not found with username {login.UserName}";
                 }
                 else if (getUser.Password == login.Password)
@@ -69,13 +69,13 @@ namespace com.tweetapp.Services
                         return $"{login.UserName} is logged in";
                 }
                 else
-                    _log.Info("\n Wrong Password.");                    
+                    _log.Error("\n Wrong Password.");                    
                 
                 return "Wrong Password";
             }
             catch(CustomException ex)
             {
-               _log.Info($"\n Error occured: {ex.Message}" );
+               _log.Error($"\n Error occured: {ex.Message}" );
                return null;
             }           
         }   
@@ -87,7 +87,7 @@ namespace com.tweetapp.Services
                 _log.Info("User forgot passowrd.");
                 if (string.IsNullOrEmpty(username))
                 {
-                    _log.Info("Required fields were empty");
+                    _log.Error("Required fields were empty");
                     throw new CustomException("Username should not be Empty");
                 }
                 
@@ -95,7 +95,7 @@ namespace com.tweetapp.Services
 
                 if(getUser==null)
                 {
-                    _log.Info($"\n No account has been found with username {username}");
+                    _log.Error($"\n No account has been found with username {username}");
                     return "user not found";
                 }
                 else
@@ -109,7 +109,7 @@ namespace com.tweetapp.Services
             }
             catch(Exception ex)
             {
-                Console.WriteLine("\n "+ex.Message);
+                _log.Error("\n "+ex.Message);
                 return null;
             }
             
@@ -128,7 +128,7 @@ namespace com.tweetapp.Services
             }
             catch(Exception ex)
             {
-                _log.Info("\n "+ex.Message);
+                _log.Error("\n "+ex.Message);
                 return null;
             }
             
@@ -143,7 +143,7 @@ namespace com.tweetapp.Services
                     return user;
                 else
                 {
-                    _log.Info("\n User Not Found.");
+                    _log.Error("\n User Not Found.");
                     return null;
                 }                  
             }
@@ -164,7 +164,7 @@ namespace com.tweetapp.Services
             }
             catch(Exception ex)
             {
-                _log.Info("\n "+ex.Message);
+                _log.Error("\n "+ex.Message);
                 return false;
             }
             

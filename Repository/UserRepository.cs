@@ -5,6 +5,7 @@ using MongoDB.Driver;
 using Microsoft.Extensions.Configuration;
 using System;
 using log4net;
+using com.tweetapp.DBContext;
 
 namespace com.tweetapp.Repository
 {
@@ -17,11 +18,11 @@ namespace com.tweetapp.Repository
         private List<User> allUsers = new List<User>();
         static readonly log4net.ILog _log = log4net.LogManager.GetLogger(typeof(UserRepository));
 
-        public UserRepository(IConfiguration configuration)
+        public UserRepository(IUsersDatabaseSettings settings)
         {
-            _configuration = configuration;
-            database = MongoConnection.GetDatabase();
-            collection = database.GetCollection<User>(_configuration.GetValue<string>("UserCollection"));
+            var client = new MongoClient(settings.ConnectionString);
+            var database = client.GetDatabase(settings.Database);
+            collection = database.GetCollection<User>(settings.UsersCollection);
         }
 
         public List<User> GetAllUsers()
@@ -35,7 +36,7 @@ namespace com.tweetapp.Repository
             }
             catch (Exception ex)
             {
-                _log.Info($"\n Exception Occured: {ex.Message}");
+                _log.Error($"\n Exception Occured: {ex.Message}");
                 return null;
             }
         }
@@ -50,7 +51,7 @@ namespace com.tweetapp.Repository
             }
             catch (Exception ex)
             {
-                _log.Info($"\n Exception Occured: {ex.Message}");
+                _log.Error($"\n Exception Occured: {ex.Message}");
                 return null;
             }
         }
@@ -66,7 +67,7 @@ namespace com.tweetapp.Repository
             }
             catch (Exception ex)
             {
-                _log.Info($"\n Exception Occured: {ex.Message}");
+                _log.Error($"\n Exception Occured: {ex.Message}");
                 return false;
             }
         }
@@ -83,7 +84,7 @@ namespace com.tweetapp.Repository
             }
             catch (Exception ex)
             {
-                _log.Info($"\n Exception Occured: {ex.Message}");
+                _log.Error($"\n Exception Occured: {ex.Message}");
                 return false;
             }
         }
@@ -100,7 +101,7 @@ namespace com.tweetapp.Repository
             }
             catch (Exception ex)
             {
-                _log.Info($"\n Exception Occured: {ex.Message}");
+                _log.Error($"\n Exception Occured: {ex.Message}");
                 return false;
             }
         }

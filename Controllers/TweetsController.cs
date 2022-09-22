@@ -17,7 +17,8 @@ namespace com.tweetapp.Controllers
     [EnableCors()]
     [Route("api/v1.0/[controller]")]
     [ApiController]
-    [Authorize]
+    /*    [Authorize]*/
+    [AllowAnonymous]
     public class TweetsController : ControllerBase
     {
         private ITweetService tweetService;
@@ -103,11 +104,11 @@ namespace com.tweetapp.Controllers
         }
 
         [HttpGet("user/search/{username}")]
-        public IActionResult GetAUser([FromQuery] string userName)
+        public IActionResult GetAUser(string username)
         {
             try
             {
-                var response = userServices.GetAUser(userName);
+                var response = userServices.GetAUser(username);
                 if (response == null)
                 {
                     return StatusCode(204, new { msg = "No user found" });
@@ -123,11 +124,11 @@ namespace com.tweetapp.Controllers
         }
 
         [HttpGet("{username}")]
-        public IActionResult GetAllTweetsOfAUser([FromQuery] string userName)
+        public IActionResult GetAllTweetsOfAUser(string username)
         {
             try
             {
-                var response = tweetService.ViewMyTweets(userName);
+                var response = tweetService.ViewMyTweets(username);
                 if (response == null)
                 {
                     return StatusCode(204, new { msg = "You don't have any tweets yet" });
@@ -152,7 +153,8 @@ namespace com.tweetapp.Controllers
                 if (response)
                 {
                     _log.Info("User added Succesfully");
-                    return Ok(new { msg = "User registered successfully" });
+                    token = _userAuth.GenerateJSONWebToken(user.UserName);
+                    return Ok(token);
                 }
                 else
                     return StatusCode(400, new { msg = "User cannot be registered" });
@@ -170,7 +172,7 @@ namespace com.tweetapp.Controllers
         {
             try
             {
-                tweet.User.UserName = username;
+                tweet.UserName = username;
                 var response = tweetService.PostTweet(tweet);
                 if (response)
                 {
@@ -189,7 +191,7 @@ namespace com.tweetapp.Controllers
         }
 
         [HttpPost("{username}/reply/{id}")]
-        public IActionResult Reply([FromQuery] string username, string id, [FromBody] TweetReply reply)
+        public IActionResult Reply(string username, string id, [FromBody] TweetReply reply)
         {
             try
             {
@@ -210,7 +212,7 @@ namespace com.tweetapp.Controllers
         }
 
         [HttpPut("{username}/forgot")]
-        public IActionResult Forgot([FromQuery] string username, [FromBody] string password)
+        public IActionResult Forgot(string username, [FromBody] string password)
         {
             try
             {
@@ -237,12 +239,12 @@ namespace com.tweetapp.Controllers
         }
 
         [HttpPut("{username}/update/{id}")]
-        public IActionResult UpdateAtweet([FromQuery] string username,string id, [FromBody] Tweet tweet)
+        public IActionResult UpdateAtweet(string username,string id, [FromBody] Tweet tweet)
         {
             try
             {
                 tweet.Id = ObjectId.Parse(id);
-                tweet.User.UserName = username;
+                tweet.UserName = username;
                 var response = tweetService.UpdateTweet(tweet);
                 if (response)
                 {
@@ -260,7 +262,7 @@ namespace com.tweetapp.Controllers
         }
 
         [HttpPut("{username}/like/{id}")]
-        public IActionResult Like([FromQuery] string username, string id)
+        public IActionResult Like(string username, string id)
         {
             try
             {       
@@ -282,7 +284,7 @@ namespace com.tweetapp.Controllers
         }
 
         [HttpPut("{username}/unlike/{id}")]
-        public IActionResult UnLike([FromQuery] string username, string id)
+        public IActionResult UnLike(string username, string id)
         {
             try
             {                
