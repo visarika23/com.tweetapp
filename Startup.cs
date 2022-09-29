@@ -53,7 +53,6 @@ namespace com.tweetapp
 
             services.AddScoped<IAuthRepo, AuthRepo>();
 
-            var key = Encoding.UTF8.GetBytes(Configuration["Jwt:Key"]);
 
 
             services.AddMvc(config =>
@@ -64,9 +63,20 @@ namespace com.tweetapp
                 config.Filters.Add(new AuthorizeFilter(policy));
             });
 
-            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            var key = Encoding.UTF8.GetBytes(Configuration["Jwt:Key"]);
+
+/*            var tokenKey = Configuration.GetValue<string>("TokenKey");
+            var key = Encoding.ASCII.GetBytes(tokenKey);*/
+
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
                  .AddJwtBearer(options =>
                  {
+                     options.RequireHttpsMetadata = false;
+                     options.SaveToken = true;
                      options.TokenValidationParameters = new TokenValidationParameters
                      {
                          ValidateIssuer = true,
@@ -78,6 +88,7 @@ namespace com.tweetapp
                          IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Jwt:Key"]))
                      };
                  });
+            //services.AddJWTTokenservices(builder.Configuration);
 
             services.AddControllers();
 
@@ -87,6 +98,30 @@ namespace com.tweetapp
             });
 
             services.AddSwaggerGen();
+
+            services.AddSwaggerGen(options =>
+            {
+                options.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+                {
+                    Name = "Authorization",
+                    Type = Microsoft.OpenApi.Models.SecuritySchemeType.Http,
+                    Scheme = "Bearer",
+                    BearerFormat = "JWT",
+                    In = Microsoft.OpenApi.Models.ParameterLocation.Header,
+                    Description = "JWT Authorization header using the Bearer scheme."
+                });
+                options.AddSecurityRequirement(new Microsoft.OpenApi.Models.OpenApiSecurityRequirement {
+                {
+                    new Microsoft.OpenApi.Models.OpenApiSecurityScheme {
+                            Reference = new Microsoft.OpenApi.Models.OpenApiReference {
+                                Type = Microsoft.OpenApi.Models.ReferenceType.SecurityScheme,
+                                    Id = "Bearer"
+                            }
+                        },
+                        new string[] {}
+                    }
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -112,6 +147,7 @@ namespace com.tweetapp
                 builder.AllowAnyHeader();
             });
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

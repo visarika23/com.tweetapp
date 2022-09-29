@@ -6,6 +6,7 @@ using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using System.Security.Cryptography;
 
 namespace com.tweetapp.Middlewares.Authentication
 {
@@ -33,12 +34,25 @@ namespace com.tweetapp.Middlewares.Authentication
               issuer: _config["Jwt:Issuer"],
               audience: _config["Jwt:Issuer"],
               null,
-              expires: DateTime.Now.AddMinutes(30),
+              expires: DateTime.Now.AddSeconds(30),
               signingCredentials: credentials);
 
             _log4net.Info("Token Is Generated!");
 
             return new JwtSecurityTokenHandler().WriteToken(token);
+        }
+
+        public string GetHash(string password)
+        {
+            // derive a 256-bit subkey (use HMACSHA1 with 10,000 iterations)
+            ASCIIEncoding encoding = new ASCIIEncoding();
+            byte[] salt = Encoding.UTF8.GetBytes("123");
+            byte[] messageBytes = encoding.GetBytes(password);
+            using (var hmacsha256 = new HMACSHA256(salt))
+            {
+                byte[] hashmessage = hmacsha256.ComputeHash(messageBytes);
+                return Convert.ToBase64String(hashmessage);
+            }
         }
     }
 }

@@ -11,14 +11,14 @@ using com.tweetapp.Services;
 using Microsoft.AspNetCore.Cors;
 using com.tweetapp.Middlewares.Authentication;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Server.HttpSys;
 
 namespace com.tweetapp.Controllers
 {
     [EnableCors()]
     [Route("api/v1.0/[controller]")]
     [ApiController]
-    /*    [Authorize]*/
-    [AllowAnonymous]
+    [Authorize(AuthenticationSchemes = Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerDefaults.AuthenticationScheme)]
     public class TweetsController : ControllerBase
     {
         private ITweetService tweetService;
@@ -40,11 +40,19 @@ namespace com.tweetapp.Controllers
         {
             try
             {
+                credentials.Password = _userAuth.GetHash(credentials.Password);
                 var response = userServices.Login(credentials);
                 if(response.Contains($"{credentials.UserName} is logged in"))
                 {
                     token = _userAuth.GenerateJSONWebToken(credentials.UserName);
-                    return Ok(token);
+                    if(token == null)
+                    {
+                        return Unauthorized();
+                    }
+                    else
+                    {
+                        return Ok(token);
+                    }
                 }
                 else if (response.Contains("User not found"))
                 {
@@ -149,6 +157,7 @@ namespace com.tweetapp.Controllers
         {
             try
             {
+                user.Password = _userAuth.GetHash(user.Password);
                 var response = userServices.Register(user);
                 if (response)
                 {
@@ -174,10 +183,10 @@ namespace com.tweetapp.Controllers
             {
                 tweet.UserName = username;
                 var response = tweetService.PostTweet(tweet);
-                if (response)
+                if (response != null)
                 {
                     _log.Info("Tweet posted Succesfully");
-                    return Ok(new { msg = "Tweet posted successfully" });
+                    return Ok(tweet);
                 }
                 else
                     return StatusCode(400, new { msg = "Tweet could not be posted" });
@@ -195,7 +204,7 @@ namespace com.tweetapp.Controllers
         {
             try
             {
-                var response = tweetService.ReplyATweet(ObjectId.Parse(id), username, reply);
+                var response = tweetService.ReplyATweet(id, username, reply);
                 if (response)
                 {
                     _log.Info("Reply added to tweet");
@@ -211,8 +220,9 @@ namespace com.tweetapp.Controllers
             }
         }
 
-        [HttpPut("{username}/forgot")]
-        public IActionResult Forgot(string username, [FromBody] string password)
+        [AllowAnonymous]
+        [HttpPut("{username}/forgot/{password}")]
+        public IActionResult Forgot(string username, string password)
         {
             try
             {
@@ -261,12 +271,13 @@ namespace com.tweetapp.Controllers
             }
         }
 
+        [AllowAnonymous]
         [HttpPut("{username}/like/{id}")]
         public IActionResult Like(string username, string id)
         {
             try
             {       
-                var response = tweetService.LikeTweet(ObjectId.Parse(id), username);
+                var response = tweetService.LikeTweet(id, username);
                 if (response)
                 {
                     _log.Info("Tweet is successfully Liked");
@@ -288,7 +299,7 @@ namespace com.tweetapp.Controllers
         {
             try
             {                
-                var response = tweetService.UnLikeTweet(ObjectId.Parse(id), username);
+                var response = tweetService.UnLikeTweet(id, username);
                 if (response)
                 {
                     _log.Info("Tweet is successfully unliked");
@@ -310,7 +321,7 @@ namespace com.tweetapp.Controllers
         {
             try
             {       
-                var response = tweetService.DeleteTweet(ObjectId.Parse(id), username);
+                var response = tweetService.DeleteTweet(id, username);
                 if (response)
                 {
                     _log.Info("Tweet is successfully deletd");

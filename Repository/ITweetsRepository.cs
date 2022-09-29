@@ -10,13 +10,13 @@ namespace com.tweetapp.Repository
     {
         public List<Tweet> GetAllTweets();
         public List<Tweet> GetMyTweets(string username);
-        public Tweet GetATweetByIdandUsername(ObjectId id, string userName);
-        public bool AddTweet(Tweet tweet);
+        public Tweet GetATweetById(string id);
+        public Tweet AddTweet(Tweet tweet);
         public bool UpdateATweet(Tweet tweet);
         public bool LikeATweet(Tweet tweet);
         public bool UnLikeATweet(Tweet tweet);
         public bool ReplyATweet(Tweet tweet, TweetReply reply);
-        public bool DeleteATweet(ObjectId id, string username);
+        public bool DeleteATweet(string id, string username);
 
     }
 }

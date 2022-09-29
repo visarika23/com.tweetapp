@@ -16,7 +16,7 @@ namespace com.tweetapp.Services
             _tweetsRepository = tweetsRepository;
         }
         
-        public bool PostTweet(Tweet tweet)
+        public Tweet PostTweet(Tweet tweet)
         {
             try
             {
@@ -27,7 +27,7 @@ namespace com.tweetapp.Services
             catch(Exception ex)
             {
                 _log.Error(ex.Message);
-                return false;
+                return null;
             }
             
         }
@@ -72,7 +72,7 @@ namespace com.tweetapp.Services
 
         public bool UpdateTweet(Tweet tweet)
         {
-            var getTweet = _tweetsRepository.GetATweetByIdandUsername(tweet.Id, tweet.UserName);
+            var getTweet = _tweetsRepository.GetATweetById(tweet.TweetId);
             if (getTweet != null)
             {
                 var response =  _tweetsRepository.UpdateATweet(tweet);
@@ -85,9 +85,9 @@ namespace com.tweetapp.Services
             }
         }
 
-        public bool LikeTweet(ObjectId id, string userName)
+        public bool LikeTweet(string id, string userName)
         {
-            var getTweet = _tweetsRepository.GetATweetByIdandUsername(id, userName);
+            var getTweet = _tweetsRepository.GetATweetById(id);
             
             if (getTweet != null)
             {
@@ -102,9 +102,9 @@ namespace com.tweetapp.Services
 
         }
 
-        public bool UnLikeTweet(ObjectId id, string userName)
+        public bool UnLikeTweet(string id, string userName)
         {
-            var getTweet = _tweetsRepository.GetATweetByIdandUsername(id, userName);
+            var getTweet = _tweetsRepository.GetATweetById(id);
 
             if (getTweet != null)
             {
@@ -119,9 +119,9 @@ namespace com.tweetapp.Services
 
         }
 
-        public bool ReplyATweet(ObjectId id, string userName, TweetReply reply)
+        public bool ReplyATweet(string id, string userName, TweetReply reply)
         {
-            var getTweet = _tweetsRepository.GetATweetByIdandUsername(id, userName);
+            var getTweet = _tweetsRepository.GetATweetById(id);
 
             if (getTweet != null)
             {
@@ -135,9 +135,9 @@ namespace com.tweetapp.Services
             }
         }
 
-        public bool DeleteTweet(ObjectId id, string userName)
+        public bool DeleteTweet(string id, string userName)
         {
-            var getTweet = _tweetsRepository.GetATweetByIdandUsername(id, userName);
+            var getTweet = _tweetsRepository.GetATweetById(id);
 
             if (getTweet != null)
             {
